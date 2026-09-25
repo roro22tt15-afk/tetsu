@@ -112,3 +112,10 @@ footer {
     color: #666;
     margin-top: 50px;
 }
+
+.parts {
+    text-align: center;
+    font-size: 2rem;
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
