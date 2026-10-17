@@ -1,84 +1,135 @@
 [
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381419/samsung_galaxy_S26.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.88/v1789381419/samsung_galaxy_S26.mp4",
     "title": "Samsung Galaxy S26",
     "cat": "tech",
-    "duration": 10.01
+    "duration": 10.005,
+    "seconds": 10,
+    "price": 50,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381419/samsung_galaxy_S26.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381534/MG_car.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.88/v1789381534/MG_car.mp4",
     "title": "سيارة MG",
     "cat": "cars",
-    "duration": 10.01
+    "duration": 10.005,
+    "seconds": 10,
+    "price": 50,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381534/MG_car.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381527/iphone_17_promax.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.88/v1789381527/iphone_17_promax.mp4",
     "title": "iPhone 17 Pro Max",
     "cat": "tech",
-    "duration": 10.01
+    "duration": 10.005,
+    "seconds": 10,
+    "price": 50,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381527/iphone_17_promax.mp4"
   },
   {
     "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237203/gloves.mp4",
     "title": "قفازات Fairtex",
     "cat": "sport",
-    "duration": 10.01
+    "duration": 10.005,
+    "seconds": 10,
+    "price": 50
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789238235/wilson_nba_drv_pro_30s_ad.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_south,w_1.0,h_0.93/v1789238235/wilson_nba_drv_pro_30s_ad.mp4",
     "title": "كرة Wilson Basketball",
-    "cat": "sport"
+    "cat": "sport",
+    "duration": 30.266667,
+    "seconds": 30,
+    "price": 150,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789238235/wilson_nba_drv_pro_30s_ad.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237130/earbods.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.88/v1789237130/earbods.mp4",
     "title": "سماعات Samsung",
     "cat": "tech",
-    "duration": 10.01
+    "duration": 10.005,
+    "seconds": 10,
+    "price": 50,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237130/earbods.mp4"
   },
   {
     "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789239911/ai_gen_ads.mp4",
     "title": "صناعة الإعلان بالذكاء الاصطناعي",
-    "cat": "creative"
+    "cat": "creative",
+    "duration": 37.988005,
+    "seconds": 38,
+    "price": 190
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789417998/202609132210.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789417998/202609132210.mp4",
     "title": "مشروب STING",
-    "cat": "drinks"
+    "cat": "drinks",
+    "duration": 30.14644,
+    "seconds": 30,
+    "price": 150,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789417998/202609132210.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789240069/caroon2.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789240069/caroon2.mp4",
     "title": "القط والفأر",
-    "cat": "cartoon"
+    "cat": "cartoon",
+    "duration": 45.186009,
+    "seconds": 45,
+    "price": 225,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789240069/caroon2.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237537/Coca-Cola_Commercial_web.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789237537/Coca-Cola_Commercial_web.mp4",
     "title": "Coca-Cola",
     "cat": "drinks",
-    "duration": 15.12
+    "duration": 15.116009,
+    "seconds": 15,
+    "price": 75,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237537/Coca-Cola_Commercial_web.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789382594/shoes.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789382594/shoes.mp4",
     "title": "Nike Air Max",
-    "cat": "sport"
+    "cat": "sport",
+    "duration": 29.679773,
+    "seconds": 30,
+    "price": 150,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789382594/shoes.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789239362/watch.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789239362/watch.mp4",
     "title": "ساعة فاخرة",
-    "cat": "luxury"
+    "cat": "luxury",
+    "duration": 30.14644,
+    "seconds": 30,
+    "price": 150,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789239362/watch.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789383930/iphone.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789383930/iphone.mp4",
     "title": "iPhone — رؤية أخرى",
-    "cat": "tech"
+    "cat": "tech",
+    "duration": 50.225011,
+    "seconds": 50,
+    "price": 250,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789383930/iphone.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789386771/villa.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789386771/villa.mp4",
     "title": "جولة في فيلا",
-    "cat": "property"
+    "cat": "property",
+    "duration": 60.231995,
+    "seconds": 60,
+    "price": 300,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789386771/villa.mp4"
   },
   {
-    "src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237214/fanta_commercial_video_web.mp4",
+    "src": "https://res.cloudinary.com/vkt86vme/video/upload/c_crop,g_north,w_1.0,h_0.92/v1789237214/fanta_commercial_video_web.mp4",
     "title": "Fanta",
     "cat": "drinks",
-    "duration": 10.1
+    "duration": 10.1,
+    "seconds": 10,
+    "price": 50,
+    "originalSrc": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237214/fanta_commercial_video_web.mp4"
   }
 ]
