@@ -1,64 +1,23 @@
-// 1. منع النقر بزر الماوس الأيمن (Right Click) في كامل الموقع
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
+const works = [{"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381419/samsung_galaxy_S26.mp4", "title": "Samsung Galaxy S26", "cat": "tech", "duration": 10.01}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381534/MG_car.mp4", "title": "سيارة MG", "cat": "cars", "duration": 10.01}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789381527/iphone_17_promax.mp4", "title": "iPhone 17 Pro Max", "cat": "tech", "duration": 10.01}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237203/gloves.mp4", "title": "قفازات Fairtex", "cat": "sport", "duration": 10.01}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789238235/wilson_nba_drv_pro_30s_ad.mp4", "title": "كرة Wilson Basketball", "cat": "sport"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237130/earbods.mp4", "title": "سماعات Samsung", "cat": "tech", "duration": 10.01}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789239911/ai_gen_ads.mp4", "title": "صناعة الإعلان بالذكاء الاصطناعي", "cat": "creative"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789417998/202609132210.mp4", "title": "مشروب STING", "cat": "drinks"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789240069/caroon2.mp4", "title": "القط والفأر", "cat": "cartoon"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237537/Coca-Cola_Commercial_web.mp4", "title": "Coca-Cola", "cat": "drinks", "duration": 15.12}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789382594/shoes.mp4", "title": "Nike Air Max", "cat": "sport"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789239362/watch.mp4", "title": "ساعة فاخرة", "cat": "luxury"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789383930/iphone.mp4", "title": "iPhone — رؤية أخرى", "cat": "tech"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789386771/villa.mp4", "title": "جولة في فيلا", "cat": "property"}, {"src": "https://res.cloudinary.com/vkt86vme/video/upload/v1789237214/fanta_commercial_video_web.mp4", "title": "Fanta", "cat": "drinks", "duration": 10.1}];
+const categories={tech:'التقنية والإلكترونيات',sport:'الرياضة والأحذية',drinks:'المشروبات',cars:'السيارات',property:'العقارات',luxury:'الساعات والإكسسوارات',cartoon:'الكرتون',creative:'صناعة المحتوى'};
+const wa=text=>'https://wa.me/201126619010?text='+encodeURIComponent(text);
+document.querySelectorAll('.wa').forEach(a=>a.href=wa('مرحبًا، شاهدت معرض أعمالك وأرغب في طلب إعلان بسعر 300 جنيه للدقيقة.'));
+const groups=document.querySelector('#work-groups');
+Object.entries(categories).forEach(([key,label])=>{
+ const section=document.createElement('section');section.className='work-section';section.dataset.category=key;
+ const heading=document.createElement('h3');heading.className='category-title';heading.textContent=label+' / '+String(works.filter(w=>w.cat===key).length).padStart(2,'0');section.append(heading);
+ const grid=document.createElement('div');grid.className='grid';section.append(grid);
+ works.filter(w=>w.cat===key).forEach(w=>{
+  const card=document.createElement('article');card.className='card';
+  const video=document.createElement('video');video.controls=true;video.playsInline=true;video.preload='none';video.src=w.src;video.setAttribute('aria-label',w.title);video.poster=w.src.replace('/upload/','/upload/so_0,w_640,q_auto/').replace(/\.mp4$/,'.jpg');
+  const info=document.createElement('div');info.className='card-info';const title=document.createElement('h4');title.textContent=w.title;
+  const price=document.createElement('p');price.className='work-price';price.textContent=w.duration ? Math.round(w.duration)+' ثانية · '+Math.round(w.duration*5)+' ج.م لإعلان بنفس المدة' : '300 ج.م / دقيقة · السعر حسب المدة';
+  const order=document.createElement('a');order.className='order';order.textContent='اطلب إعلانًا بهذا الأسلوب ↗';order.target='_blank';order.rel='noopener';order.href=wa('مرحبًا، أريد إعلانًا بأسلوب '+w.title+' بسعر 300 جنيه للدقيقة.');
+  video.addEventListener('loadedmetadata',()=>{if(Number.isFinite(video.duration)){const sec=Math.round(video.duration);price.textContent=sec+' ثانية · '+Math.round(video.duration*5)+' ج.م لإعلان بنفس المدة';}});
+  video.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();}));
+  info.append(title,price,order);card.append(video,info);grid.append(card);
+ });groups.append(section);
 });
-
-// 2. منع اختصارات لوحة المفاتيح الخاصة بالمطورين (DevTools) ونسخ الكود
-document.onkeydown = function(e) {
-    // منع F12
-    if (e.keyCode === 123) {
-        return false;
-    }
-    
-    // منع Ctrl+Shift+I و Ctrl+Shift+J (فحص العناصر)
-    if (e.ctrlKey && e.shiftKey && (e.keyCode === 'I'.charCodeAt(0) || e.keyCode === 'J'.charCodeAt(0))) {
-        return false;
-    }
-    
-    // منع Ctrl+U (عرض مصدر الصفحة)
-    if (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) {
-        return false;
-    }
-
-    // منع Ctrl+S (حفظ الصفحة)
-    if (e.ctrlKey && e.keyCode === 'S'.charCodeAt(0)) {
-        return false;
-    }
-};
-
-// 3. منع سحب وإفلات العناصر (Drag and Drop) للصور والفيديوهات
-document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-});
-
-// 4. منع تحديد النصوص (إجراء إضافي للحماية)
-document.addEventListener('selectstart', function(e) {
-    e.preventDefault();
-});
-
-// ========================================================
-// 5. تفعيل الصوت وكتمه عند النقر على الفيديوهات
-// ========================================================
-
-// جلب جميع عناصر الأعمال
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-portfolioItems.forEach(item => {
-    const video = item.querySelector('.ugc-video');
-    const protectionLayer = item.querySelector('.protection-layer');
-
-    if(video && protectionLayer) {
-        // تغيير شكل مؤشر الماوس ليظهر كإصبع النقر
-        protectionLayer.style.cursor = 'pointer';
-
-        // عند النقر على طبقة الحماية
-        protectionLayer.addEventListener('click', () => {
-            // عكس حالة كتم الصوت (إذا كان مكتوماً يشتغل، وإذا كان يعمل يُكتم)
-            if(video.muted) {
-                video.muted = false;
-            } else {
-                video.muted = true;
-            }
-        });
-    }
-});
+const filters=document.querySelector('.filters');
+Object.entries({all:'كل الأعمال',...categories}).forEach(([key,label])=>{const button=document.createElement('button');button.type='button';button.textContent=label;button.setAttribute('aria-pressed',String(key==='all'));button.addEventListener('click',()=>{filters.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelectorAll('.work-section').forEach(s=>{s.hidden=key!=='all'&&s.dataset.category!==key;if(s.hidden)s.querySelectorAll('video').forEach(v=>v.pause());});});filters.append(button);});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.preload='metadata';observer.unobserve(entry.target);}}),{rootMargin:'100px'});document.querySelectorAll('video').forEach(v=>observer.observe(v));
